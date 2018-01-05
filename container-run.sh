@@ -6,4 +6,4 @@ cd /nio/project
 find blocks -name requirements.txt -maxdepth 2 | xargs -I {} pip install -r {}
 
 # Run nio
-exec nio_run -r /nio/project
+exec niod -r /nio/project
