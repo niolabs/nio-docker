@@ -1,20 +1,23 @@
 Replicator
 ==========
-Each incoming signal is replicated x times, where x is the number of items in the list that `list` evaluates to. Each output signal will be the same as the input signal with a new attribute, `title`, set to a value of the list.
+The Replicator block multiplies each incoming signal. The number of multiplied signals will be the same as the length of the list configured in the *list* property.  Each signal emitted will be the same as the original incoming signal, with an added attribute (Attribute Title) whose value corresponds to the *list* value at the same index.
 
 Properties
 ----------
 - **list**: An expression property that needs to evaluate to a list. A signal will be notified from the block for each item in the list.
-- **title**: Name of attribute to be added with list value.
+- **title**: Name of attribute to be added with the corresponding list value.
 
 Inputs
 ------
+None
 
 Outputs
 -------
+None
 
 Commands
 --------
+None
 
 Example
 -------
@@ -50,3 +53,4 @@ Input Signal:
   'meal': 'chicken'
 }
 ```
+

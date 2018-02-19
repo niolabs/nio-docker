@@ -11,7 +11,7 @@ class Replicator(Block):
     new attribute, title, with the value of the list.
 
     """
-    version = VersionProperty("1.0.0")
+    version = VersionProperty("1.0.1")
     title = StringProperty(title='Attribute Title', default='')
     list = Property(title='List', default='')
 
