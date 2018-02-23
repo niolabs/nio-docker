@@ -4,9 +4,9 @@ To run your nio instance in a docker container you will first need to download y
 
 ## Configure the Project
 
-1. Update the submodules for the default project
+1. Add a submodule for the default project
 ```
-git submodule update --init --recursive
+git submodule add https://github.com/niolabs/project_template default_project
 ```
 2. Open `default_project/nio.conf`
 3. Find the hostname and token for your pubkeeper server

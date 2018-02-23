@@ -1,3 +1,0 @@
-[submodule "default_project"]
-	path = default_project
-	url = git://github.com/niolabs/project_template.git
