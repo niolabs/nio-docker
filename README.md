@@ -2,6 +2,18 @@
 
 To run your nio instance in a docker container you will first need to download your nio binary from the [binary downloads page](https://app.n.io/binaries/download).
 
+## Configure the Project
+
+1. Add a submodule for the default project
+```
+git submodule add https://github.com/niolabs/project_template default_project
+```
+2. Open `default_project/nio.conf`
+3. Find the hostname and token for your pubkeeper server
+    * If you're using a nio hosted Pubkeeper server, these can be found from the [System Designer](http://designer.n.io) in the edit modal for your system
+4. Copy your hostname and token into `PK_HOST` and `PK_TOKEN` under the `user_defined` section
+5. Copy your hostname into `WS_HOST` being sure to replace `pubkeeper` with `websocket`
+
 ## Building the Docker image
 
 1. Copy your nio binary wheel into this folder
