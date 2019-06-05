@@ -14,9 +14,13 @@ ENTRYPOINT ["/nio/bin/container-entrypoint.sh"]
 ARG WHEEL_FILE
 ARG PK_WHEEL_FILE
 
+# update pip
+RUN pip3 install --upgrade pip setuptools
+
 # Install Wheels
-COPY $PK_WHEEL_FILE /nio/
-RUN pip3 install /nio/$PK_WHEEL_FILE && rm /nio/$PK_WHEEL_FILE
+# Uncomment following lines to install PK server
+# COPY $PK_WHEEL_FILE /nio/
+# RUN pip3 install /nio/$PK_WHEEL_FILE && rm /nio/$PK_WHEEL_FILE
 
 COPY $WHEEL_FILE /nio/
 RUN pip3 install /nio/$WHEEL_FILE && rm /nio/$WHEEL_FILE
